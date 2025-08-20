@@ -3,16 +3,18 @@ D02 - Patch Management Strategy
 > To demonstrate D02 this is the code repository that has vulnerable code and outdates libraries and dependencies, Image
 
 > Follow this steps to build docker image, run container, exploit vulnerability:
+> 
 Clone the repo:
-- git clone --branch vulnarable https://github.com/yuvaraju1/d02-flask-demo.git branch-vulnerable
-or
-- git clone https://github.com/yuvaraju1/d02-flask-demo.git
-- git checkout vulnerable 
 
-- cd d02-flask-demo
+- git clone --branch vulnerable https://github.com/yuvaraju1/d02-flask-demo.git repo-vulnerable
+- cd repo-vulnerable
+  
 Build image:
+
 - docker build -t d02:vulnerable .
+  
 Run the image:
+
 - docker run -d -p 80:5000 --name container1 d02:vulnerable
 
 
